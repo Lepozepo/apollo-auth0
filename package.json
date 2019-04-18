@@ -1,6 +1,7 @@
 {
   "name": "apollo-auth0",
   "version": "1.0.1",
+  "description": "Easily integrate your apollo-server with Auth0 Management APIs",
   "main": "index.js",
   "repository": "https://github.com/Lepozepo/apollo-auth0.git",
   "author": "Marcelo Reyna <lepozepo@gmail.com>",
