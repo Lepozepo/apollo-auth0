@@ -1,6 +1,6 @@
 {
   "name": "apollo-auth0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "https://github.com/Lepozepo/apollo-auth0.git",
   "author": "Marcelo Reyna <lepozepo@gmail.com>",
