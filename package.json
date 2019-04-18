@@ -23,7 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-env": "^7.4.3",
     "@pika/pack": "^0.3.6",
     "@pika/plugin-build-node": "^0.3.14",
     "@pika/plugin-standard-pkg": "^0.3.14",
