@@ -1,0 +1,29 @@
+# https://circleci.com/docs/2.0/language-javascript/
+
+version: 2
+jobs:
+  test:
+    docker:
+      # Specify the version you desire here
+      - image: circleci/python:3.7.0-node
+
+    steps:
+      - checkout
+
+      # Cache
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+
+      - run: yarn test:lint
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
