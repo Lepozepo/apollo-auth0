@@ -36,7 +36,7 @@
     "eslint-plugin-react": "^7.12.4"
   },
   "dependencies": {
-    "apollo-datasource-rest": "^0.3.2",
+    "apollo-datasource-rest": "^0.4.0",
     "generate-password": "^1.4.1",
     "lodash": "^4.17.11"
   }

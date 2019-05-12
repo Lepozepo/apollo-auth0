@@ -1,5 +1,7 @@
 # Apollo Auth0
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Lepozepo/apollo-auth0.svg)](https://greenkeeper.io/)
+
 ## How to use
 
 This package is specifically meant to be used with apollo to take advantage of apollo's caching engine.
