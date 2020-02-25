@@ -1,5 +1,4 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { get } from 'lodash';
 
 export default class ServerClient extends RESTDataSource {
   constructor(props) {
@@ -57,7 +56,7 @@ export default class ServerClient extends RESTDataSource {
 
       return this._managementToken;
     } catch (err) {
-      throw get(err, 'response.data.message') || get(err, 'message') || err;
+      throw err?.response?.data?.message || err?.message || err;
     }
   };
 
@@ -108,7 +107,7 @@ export default class ServerClient extends RESTDataSource {
       });
       return res;
     } catch (err) {
-      throw get(err, 'extensions.response.body.message') || err;
+      throw err?.extensions?.response?.body?.message || err;
     }
   }
 
@@ -128,7 +127,7 @@ export default class ServerClient extends RESTDataSource {
 
       return res;
     } catch (err) {
-      throw get(err, 'extensions.response.body.message') || err;
+      throw err?.extensions?.response?.body?.message || err;
     }
   }
 
