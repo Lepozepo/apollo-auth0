@@ -27,10 +27,15 @@ A class that holds your client configuration.
 
 #### Provided Functions
 **getUsers(params)**: Queries for users, uses `search_engine.v3`, [params](https://auth0.com/docs/api/management/v2#!/Users/get_users)
+
 **getUser(id, params)**: Queries for a single user, [params](https://auth0.com/docs/api/management/v2#!/Users/get_users_by_id)
+
 **getUsersByEmail(params)**: Queries for users by email, uses `search_engine.v3`, [params](https://auth0.com/docs/api/management/v2#!/Users_By_Email/get_users_by_email)
+
 **createUser(params)**: Mutates auth0 Username-Password-Authentication to create a new user with a randomly generated password, [params](https://auth0.com/docs/api/management/v2#!/Users/post_users)
+
 **resetPassword(id, params)**: Mutates auth0 Username-Password-Authentication by user ID to reset a users password. Params:
   - newPassword: A new user password
+
 **sendChangePasswordEmail(email)**: Send an email to the user to request a password change
 

@@ -1,6 +1,5 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
 import { get } from 'lodash';
-import { generate as generatePassword } from 'generate-password';
 
 export default class ServerClient extends RESTDataSource {
   constructor(props) {
@@ -105,11 +104,6 @@ export default class ServerClient extends RESTDataSource {
     try {
       const res = await this.post('/api/v2/users', {
         connection: 'Username-Password-Authentication',
-        password: generatePassword({
-          length: 10,
-          numbers: true,
-          uppercase: true,
-        }),
         ...user,
       });
       return res;
