@@ -9,7 +9,7 @@
   "scripts": {
     "pack:build": "pack build",
     "pack:publish": "pack publish",
-    "test:lint": "eslint ./src --quiet -c ./.eslintrc.js"
+    "test": "eslint ./src --quiet -c ./.eslintrc.js"
   },
   "@pika/pack": {
     "pipeline": [
@@ -22,12 +22,14 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
     "@babel/preset-env": "^7.4.3",
-    "@pika/pack": "^0.3.6",
-    "@pika/plugin-build-node": "^0.3.14",
-    "@pika/plugin-standard-pkg": "^0.3.14",
+    "@babel/preset-react": "^7.8.3",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-standard-pkg": "^0.9.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -36,8 +38,9 @@
     "eslint-plugin-react": "^7.12.4"
   },
   "dependencies": {
-    "apollo-datasource-rest": "^0.4.0",
-    "generate-password": "^1.4.1",
+    "apollo-datasource-rest": "^0.3.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.7.0",
     "lodash": "^4.17.11"
   }
 }

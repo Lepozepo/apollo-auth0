@@ -1,6 +1,4 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { get } from 'lodash';
-import { generate as generatePassword } from 'generate-password';
 
 export default class ServerClient extends RESTDataSource {
   constructor(props) {
@@ -58,7 +56,7 @@ export default class ServerClient extends RESTDataSource {
 
       return this._managementToken;
     } catch (err) {
-      throw get(err, 'response.data.message') || get(err, 'message') || err;
+      throw err?.response?.data?.message || err?.message || err;
     }
   };
 
@@ -105,16 +103,11 @@ export default class ServerClient extends RESTDataSource {
     try {
       const res = await this.post('/api/v2/users', {
         connection: 'Username-Password-Authentication',
-        password: generatePassword({
-          length: 10,
-          numbers: true,
-          uppercase: true,
-        }),
         ...user,
       });
       return res;
     } catch (err) {
-      throw get(err, 'extensions.response.body.message') || err;
+      throw err?.extensions?.response?.body?.message || err;
     }
   }
 
@@ -134,7 +127,7 @@ export default class ServerClient extends RESTDataSource {
 
       return res;
     } catch (err) {
-      throw get(err, 'extensions.response.body.message') || err;
+      throw err?.extensions?.response?.body?.message || err;
     }
   }
 
