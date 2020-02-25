@@ -39,6 +39,8 @@
   },
   "dependencies": {
     "apollo-datasource-rest": "^0.3.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.7.0",
     "lodash": "^4.17.11"
   }
 }
